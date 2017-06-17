@@ -4,6 +4,8 @@ import {AppComponent} from './app.component';
 import {MoviesComponent} from './components/movies/movies.component';
 import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
+import {MovieService} from "app/services/movie.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
     declarations: [
@@ -13,9 +15,10 @@ import {SearchBarComponent} from './components/search-bar/search-bar.component';
         SearchBarComponent
     ],
     imports: [
+        HttpModule,
         BrowserModule
     ],
-    providers: [],
+    providers: [MovieService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
