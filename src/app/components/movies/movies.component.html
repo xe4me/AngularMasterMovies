@@ -4,10 +4,11 @@
         <div class="input-group">
             <input type="text"
                    class="form-control"
+                   #myInput
                    placeholder="Search for movies..."
-                   (keyup.enter)="search($event)">
+                   (keyup.enter)="search($event.target)">
             <span class="input-group-btn">
-                <button class="btn btn-primary" type="button" (click)="search($event)">Go!</button>
+                <button class="btn btn-primary" type="button" (click)="search(myInput)">Go!</button>
             </span>
         </div>
     </div>

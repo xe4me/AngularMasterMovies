@@ -9,6 +9,6 @@ export class MoviesComponent {
     public movies = [1, 2, 3, 4];
 
     public search($event) {
-        console.log('target', $event.target)
+        console.log('target', $event.value)
     }
 }
