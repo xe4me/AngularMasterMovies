@@ -12,5 +12,4 @@ export class MovieCardComponent {
         vote_average: 980,
         title: 'Troy'
     };
-
 }

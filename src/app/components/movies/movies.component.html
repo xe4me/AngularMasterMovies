@@ -1,9 +1,17 @@
-<p>
-    movies works!
-</p>
-
-<hr>
-Here is our movie card
-<div class="father">
-    <app-movie-card></app-movie-card>
+<div class="jumbotron">
+    <p>Search for a movie</p>
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Search for movies..."
+                   (keyup.enter)="search($event)">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" (click)="search($event)">Go!</button>
+            </span>
+        </div>
+    </div>
 </div>
+
+
+<app-movie-card></app-movie-card>
