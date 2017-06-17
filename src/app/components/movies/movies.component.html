@@ -1,19 +1,4 @@
-<div class="jumbotron">
-    <p>Search for a movie</p>
-    <div class="form-group">
-        <div class="input-group">
-            <input type="text"
-                   class="form-control"
-                   #myInput
-                   placeholder="Search for movies..."
-                   (keyup.enter)="search($event.target)">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button" (click)="search(myInput)">Go!</button>
-            </span>
-        </div>
-    </div>
-</div>
-
+<app-search-bar (search)="search($event)"></app-search-bar>
 <div *ngFor="let movie of movies" class="col-sm-3">
     <app-movie-card [movie]="movie"></app-movie-card>
 </div>

@@ -22,6 +22,6 @@ export class MoviesComponent {
     ];
 
     public search($event) {
-        console.log('target', $event.value)
+        console.log('value ', $event);
     }
 }
