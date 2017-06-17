@@ -1,14 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Films</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <title>Films</title>
+    <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-  <app-root></app-root>
+<body style="font-size: 40px">
+<app-root></app-root>
+
+
+<h3>Static title</h3>
+</div>
+
+
+<div id="dynamic">
+    Original content
+</div>
+
+<button id="button2"> Update the variable</button>
+<button id="button"> Detect changes</button><br>
+<script>
+    var text = "Content was updated";
+    var button = document.getElementById('button');
+    var button2 = document.getElementById('button2');
+
+
+    function detectChanges() {
+        var div = document.getElementById('dynamic');
+        div.innerHTML = text;
+    }
+    button.onclick = function () {
+        detectChanges();
+    };
+
+    button2.onclick = function () {
+        text = "Updated only after we detected the changes";
+    };
+</script>
+
+
 </body>
 </html>
+
