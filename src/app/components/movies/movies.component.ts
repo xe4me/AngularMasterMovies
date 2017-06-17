@@ -7,6 +7,7 @@ import {MovieService} from "../../services/movie.service";
     styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
+    public searchList;
     public popularList;
     public theatersList;
     public topRatedList;
@@ -25,6 +26,10 @@ export class MoviesComponent {
     }
 
     public search(query) {
-        this.movieService.searchMovies(query);
+        this.movieService
+            .searchMovies(query)
+            .subscribe(res => {
+                this.searchList = res.results;
+            });
     }
 }

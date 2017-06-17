@@ -1,5 +1,11 @@
 <app-search-bar (search)="search($event)"></app-search-bar>
 
+<div class="row" *ngIf="searchList">
+    <div class="col-lg-12">
+        <h3 class="h3 text-success">Search result</h3>
+        <app-movie-card *ngFor="let movie of searchList" [movie]="movie" class="col-sm-3"></app-movie-card>
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-12">
         <h3 class="h3 text-success">Popular movies</h3>
