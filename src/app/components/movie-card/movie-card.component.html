@@ -1,5 +1,5 @@
 <div class="thumbnail">
-    <img src="{{movie.poster_path}}" *ngIf="movie.poster_path">
+    <img src="{{movie.poster_path}}">
     <div class="caption">
         <h4 class="text-ellipsis">
             <a title="{{movie.title}}">{{movie.title}}</a>
@@ -7,7 +7,7 @@
         <p><strong>Release Date: </strong>{{movie.release_date}}</p>
         <p>
             <a >View details &raquo;</a>
-            <small class="label label-success pull-right" *ngIf="movie.vote_average">
+            <small class="label label-success pull-right">
                 {{movie.vote_average}}
                 <i class="glyphicon glyphicon-star"></i>
             </small>
