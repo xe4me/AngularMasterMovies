@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 
 @Component({
     selector: 'app-movie-card',
@@ -6,10 +6,5 @@ import {Component} from "@angular/core";
     styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent {
-    public movie = {
-        poster_path: 'assets/troy.jpg',
-        release_date: '10/10/1987',
-        vote_average: 980,
-        title: 'Troy'
-    };
+    @Input() movie;
 }

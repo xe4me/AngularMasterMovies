@@ -15,5 +15,5 @@
 </div>
 
 <div *ngFor="let movie of movies" class="col-sm-3">
-    <app-movie-card></app-movie-card>
+    <app-movie-card [movie]="movie"></app-movie-card>
 </div>
