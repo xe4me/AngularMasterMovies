@@ -13,13 +13,4 @@ export class MovieCardComponent {
         title: 'Troy'
     };
 
-
-    public update() {
-        this.movie = {
-            poster_path: 'assets/shawshank.jpg',
-            release_date: '10/10/2012',
-            vote_average: 1000,
-            title: 'Shawshank Redemption'
-        }
-    }
 }
