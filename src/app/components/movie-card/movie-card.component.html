@@ -1,16 +1,17 @@
 <div class="thumbnail">
-    <img src="assets/troy.jpg">
+    <img src="{{movie.poster_path}}" *ngIf="movie.poster_path">
     <div class="caption">
         <h4 class="text-ellipsis">
-            <a>Troy</a>
+            <a title="{{movie.title}}">{{movie.title}}</a>
         </h4>
-        <p><strong>Release Date: </strong>1/1/2020</p>
+        <p><strong>Release Date: </strong>{{movie.release_date}}</p>
         <p>
-            <a>View details &raquo;</a>
-            <small class="label label-success pull-right">
-                200
+            <a >View details &raquo;</a>
+            <small class="label label-success pull-right" *ngIf="movie.vote_average">
+                {{movie.vote_average}}
                 <i class="glyphicon glyphicon-star"></i>
             </small>
         </p>
     </div>
 </div>
+<button class="btn btn-info" (click)="update()"> update</button>
