@@ -13,5 +13,6 @@
     </div>
 </div>
 
-
-<app-movie-card></app-movie-card>
+<div *ngFor="let movie of movies" class="col-sm-3">
+    <app-movie-card></app-movie-card>
+</div>
