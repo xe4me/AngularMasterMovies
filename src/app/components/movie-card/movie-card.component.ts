@@ -12,4 +12,13 @@ export class MovieCardComponent {
         vote_average: 980,
         title: 'Troy'
     };
+
+    change() {
+        this.movie = {
+            poster_path: null,
+            release_date: '10/10/1987',
+            vote_average: 980,
+            title: 'Troy'
+        };
+    }
 }
