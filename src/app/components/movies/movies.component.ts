@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {MovieService} from "../../services/movie.service";
 
 @Component({
     selector: 'app-movies',
@@ -20,8 +21,9 @@ export class MoviesComponent {
             title: 'Shaw shank Redemption'
         }
     ];
+    public searchService = new MovieService();
 
-    public search($event) {
-        console.log('value ', $event);
+    public search(query) {
+        this.searchService.searchMovies(query);
     }
 }
