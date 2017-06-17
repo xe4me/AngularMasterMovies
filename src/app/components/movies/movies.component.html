@@ -1,4 +1,4 @@
 <app-search-bar (search)="search($event)"></app-search-bar>
-<div *ngFor="let movie of movies" class="col-sm-3">
+<div *ngFor="let movie of popularList" class="col-sm-3">
     <app-movie-card [movie]="movie"></app-movie-card>
 </div>
