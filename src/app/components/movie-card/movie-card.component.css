@@ -3,10 +3,18 @@
     position: relative;
     display: inline-block;
 }
+:host([small]) {
+    max-width: 200px;
+}
+:host([smaller]) {
+    max-width: 100px;
+}
 
-:host-context(div.father) {
-    padding: 2px;
+:host-context(.yellowgreen) {
     background: yellowgreen;
+}
+:host-context(.blue) {
+    background: blue;
 }
 
 img {
