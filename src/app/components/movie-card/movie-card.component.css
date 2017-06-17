@@ -4,11 +4,6 @@
     display: inline-block;
 }
 
-:host-context(div.father) {
-    padding: 2px;
-    background: yellowgreen;
-}
-
 img {
     width: 100%;
 }
