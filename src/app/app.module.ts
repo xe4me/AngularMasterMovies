@@ -6,13 +6,15 @@ import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
 import {MovieService} from "app/services/movie.service";
 import {HttpModule} from "@angular/http";
+import { LeftNavComponent } from './components/left-nav/left-nav.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         MoviesComponent,
         MovieCardComponent,
-        SearchBarComponent
+        SearchBarComponent,
+        LeftNavComponent
     ],
     imports: [
         HttpModule,
