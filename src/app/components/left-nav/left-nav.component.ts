@@ -16,4 +16,7 @@ export class LeftNavComponent {
                 this.genres = res.genres.slice(0, 20);
             });
     }
+    check(thing){
+        console.log('thing',thing);
+    }
 }
