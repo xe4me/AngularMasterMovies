@@ -6,8 +6,11 @@ import {MovieCardComponent} from './components/movie-card/movie-card.component';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
 import {MovieService} from "app/services/movie.service";
 import {HttpModule} from "@angular/http";
-import { LeftNavComponent } from './components/left-nav/left-nav.component';
-import { GenreFilterPipe } from './pipes/genre-filter.pipe';
+import {LeftNavComponent} from './components/left-nav/left-nav.component';
+import {GenreFilterPipe} from './pipes/genre-filter.pipe';
+import {MovieComponent} from './components/movie/movie.component';
+import {RouterModule} from "@angular/router";
+import {appRoutes} from "./app.routes";
 
 @NgModule({
     declarations: [
@@ -16,10 +19,12 @@ import { GenreFilterPipe } from './pipes/genre-filter.pipe';
         MovieCardComponent,
         SearchBarComponent,
         LeftNavComponent,
-        GenreFilterPipe
+        GenreFilterPipe,
+        MovieComponent
     ],
     imports: [
         HttpModule,
+        RouterModule.forRoot(appRoutes),
         BrowserModule
     ],
     providers: [MovieService],
