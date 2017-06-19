@@ -11,18 +11,24 @@ import {GenreFilterPipe} from './pipes/genre-filter.pipe';
 import {MovieComponent} from './components/movie/movie.component';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./app.routes";
+import {NavBarComponent} from "./nav-bar/nav-bar.component";
+import {SignupComponent} from "./signup/signup.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
         AppComponent,
+        NavBarComponent,
         MoviesComponent,
         MovieCardComponent,
         SearchBarComponent,
         LeftNavComponent,
         GenreFilterPipe,
+        SignupComponent,
         MovieComponent
     ],
     imports: [
+        ReactiveFormsModule,
         HttpModule,
         RouterModule.forRoot(appRoutes),
         BrowserModule
