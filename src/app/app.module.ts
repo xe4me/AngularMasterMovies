@@ -11,8 +11,8 @@ import {GenreFilterPipe} from './pipes/genre-filter.pipe';
 import {MovieComponent} from './components/movie/movie.component';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./app.routes";
-import {NavBarComponent} from "./nav-bar/nav-bar.component";
-import {SignupComponent} from "./signup/signup.component";
+import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
+import {SignupComponent} from "./components/signup/signup.component";
 import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
