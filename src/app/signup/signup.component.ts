@@ -11,32 +11,7 @@ export class SignupComponent {
 
     constructor(private _builder: FormBuilder) {
         this.form = this._builder.group({
-            email: '',
-            password: '',
-            agree: null,
-            contactNumbers: this._builder.array([""])
+            email: ''
         });
-    }
-
-    remove(index: number) {
-        this.form.get('contactNumbers').removeAt(index);
-    }
-
-    add(index: number) {
-        let control = new FormControl();
-        this.form.get('contactNumbers').push(control);
-    }
-
-    reset() {
-        this.form.reset();
-    }
-
-    submit(value) {
-        console.log('value', value);
-    }
-
-
-    get emailControl() {
-        return this.form.get('email');
     }
 }
